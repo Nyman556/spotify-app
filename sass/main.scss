@@ -1,0 +1,91 @@
+@import 'config';
+
+$red: #6c1528;
+$black:#030001;
+$text-color: #fffeff;
+$text-secondary: #a89e9c;
+$active: #34ae55;
+$secondary: #34ae55;
+$active-background: rgba(36, 14, 19, 0.589);
+
+$font-weight: 300, 400;
+
+body {
+    color: $text-color;
+    font-family: 'Montserrat', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient($red, $black);
+    #bar {
+        width: 100%;
+        height: 2vh;
+        background: $black;
+    }
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 3fr 7fr;
+        .playlist {
+            * {
+                padding: 0.2em 0;
+            }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30vw;
+            #album-cover {
+                margin-top: 1em;
+                width: 400px;
+                height: 400px;
+                background-size: contain;
+                background-image: url(/dist/assets/img/odz.jpg);
+                
+            }
+            #playlist-name {
+                font-size: 2.5rem;
+            }
+            #song-counter {
+                color: $text-secondary;
+            }
+            #playbutton {
+                background: $secondary;
+                color: $text-color;
+                margin: 1em 0;
+                padding: 1em 5em;
+                border-radius: 30px;
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+        #song-list {
+            .song{
+                margin: 1em 0;
+                display: flex;
+                align-items: center;
+                * {
+                    padding: 0.3em 1em;
+                }
+                .song-info {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 1.1rem;
+                    #artist {
+                        color: $text-secondary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.active {
+    background: rgba(36, 14, 19, 0.589);
+}
+
+.fa-pause {
+    color: $active;
+}

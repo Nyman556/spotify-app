@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  font: inherit;
+  outline: none;
+}
+
+i {
+  font-size: 1.5rem;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+body {
+  color: #fffeff;
+  font-family: 'Montserrat', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, from(#6c1528), to(#030001));
+  background: linear-gradient(#6c1528, #030001);
+}
+
+body #bar {
+  width: 100%;
+  height: 2vh;
+  background: #030001;
+}
+
+body .wrapper {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 7fr;
+      grid-template-columns: 3fr 7fr;
+}
+
+body .wrapper .playlist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30vw;
+}
+
+body .wrapper .playlist * {
+  padding: 0.2em 0;
+}
+
+body .wrapper .playlist #album-cover {
+  margin-top: 1em;
+  width: 400px;
+  height: 400px;
+  background-size: contain;
+  background-image: url(/dist/assets/img/odz.jpg);
+}
+
+body .wrapper .playlist #playlist-name {
+  font-size: 2.5rem;
+}
+
+body .wrapper .playlist #song-counter {
+  color: #a89e9c;
+}
+
+body .wrapper .playlist #playbutton {
+  background: #34ae55;
+  color: #fffeff;
+  margin: 1em 0;
+  padding: 1em 5em;
+  border-radius: 30px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .wrapper .playlist #playbutton:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+body .wrapper #song-list .song {
+  margin: 1em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .wrapper #song-list .song * {
+  padding: 0.3em 1em;
+}
+
+body .wrapper #song-list .song .song-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1.1rem;
+}
+
+body .wrapper #song-list .song .song-info #artist {
+  color: #a89e9c;
+}
+
+.active {
+  background: rgba(36, 14, 19, 0.589);
+}
+
+.fa-pause {
+  color: #34ae55;
+}
+/*# sourceMappingURL=main.css.map */
