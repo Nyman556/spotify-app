@@ -29,6 +29,12 @@ i:hover {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+  cursor: default;
+}
+
 body {
   color: #fffeff;
   font-family: 'Montserrat', sans-serif;
@@ -39,22 +45,35 @@ body {
   background: linear-gradient(#6c1528, #030001);
 }
 
-body #bar {
-  width: 100%;
-  height: 2vh;
-  background: #030001;
+body .audioPlayer .playlist {
+  position: absolute;
+  left: 38vw;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-body .wrapper {
-  width: 100%;
-  height: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 3fr 7fr;
-      grid-template-columns: 3fr 7fr;
+body .audioPlayer a {
+  margin-top: 0.1em;
+  padding-right: 1.5em;
+  font-size: 1rem;
+  width: 62vw;
+  min-height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body .wrapper .playlist {
+body .showcase {
+  width: 10vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,27 +87,29 @@ body .wrapper .playlist {
   width: 30vw;
 }
 
-body .wrapper .playlist * {
+body .showcase * {
   padding: 0.2em 0;
 }
 
-body .wrapper .playlist #album-cover {
+body .showcase .album-cover {
   margin-top: 1em;
   width: 400px;
   height: 400px;
-  background-size: contain;
-  background-image: url(/dist/assets/img/odz.jpg);
+  background-size: cover;
+  background-image: url(/dist/assets/img/drake.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-body .wrapper .playlist #playlist-name {
+body .showcase .playlist-name {
   font-size: 2.5rem;
 }
 
-body .wrapper .playlist #song-counter {
+body .showcase .song-counter {
   color: #a89e9c;
 }
 
-body .wrapper .playlist #playbutton {
+body .showcase .playbutton {
   background: #34ae55;
   color: #fffeff;
   margin: 1em 0;
@@ -98,26 +119,23 @@ body .wrapper .playlist #playbutton {
   transition: all 0.3s ease-in-out;
 }
 
-body .wrapper .playlist #playbutton:hover {
+body .showcase .playbutton:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-body .wrapper #song-list .song {
-  margin: 1em 0;
+body .wrapper {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-body .wrapper #song-list .song * {
-  padding: 0.3em 1em;
+body .wrapper * {
+  margin: 0 0.2em;
 }
 
-body .wrapper #song-list .song .song-info {
+body .wrapper .song-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -125,10 +143,10 @@ body .wrapper #song-list .song .song-info {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
-body .wrapper #song-list .song .song-info #artist {
+body .wrapper .song-info #artist {
   color: #a89e9c;
 }
 
