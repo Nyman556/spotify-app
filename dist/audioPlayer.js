@@ -66,8 +66,4 @@ export default class AudioPlayer {
 
         this.currentAudio.style.background = '';
     }
-
-    setPlayButton() {
-
-    }
 }
