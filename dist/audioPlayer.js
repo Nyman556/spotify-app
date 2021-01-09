@@ -7,6 +7,7 @@ export default class AudioPlayer {
 
     addPlayerElements() {
         this.audioElem = document.createElement('audio');
+        this.audioElem.classList.add('audio');
         const playListElem = document.createElement('div');
         playListElem.classList.add('playlist');
         this.playerElem.appendChild(this.audioElem);

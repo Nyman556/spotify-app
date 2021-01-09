@@ -32,7 +32,27 @@ const audioPlayer = new AudioPlayer('.audioPlayer', [
 }
 
 function songCounter(exportedSongs) {
-  counter = document.querySelector('song-counter');
-  counter.innerHTML = exportedSongs.length + 'Songs';
-  console.log(exportedSongs);
+  const counter = document.querySelector('.song-counter');
+  counter.innerHTML = exportedSongs.length + ' Songs';
 }
+
+const btn = document.querySelector('.playbutton');
+var playing = false;
+
+btn.addEventListener('click', (e) => {
+  const audio = document.querySelector('.audio');
+  console.log(audio);
+  if (audio.src == '') {
+    console.log('no song loaded')
+  }
+  if (audio.src != '' && playing === false) {
+    audio.play();
+    btn.innerHTML = 'PAUSE';
+    return playing = true;
+  }
+  if (audio.src != '' && playing === true) {
+    audio.pause();
+    btn.innerHTML = 'PLAY';
+    return playing = false;
+  }
+});
